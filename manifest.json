@@ -1,16 +1,26 @@
 {
-  "name": "YouTube Classic",
-  "version": "1.2",
-  "description": "Restore Classic YouTube!",
-  "permissions": ["webRequest", "webRequestBlocking", "*://www.youtube.com/*"],
-  "background": {
-    "scripts": ["background.js"]
-  },
-  "icons": {
-    "16": "images/yt_classic16.png",
-    "32": "images/yt_classic32.png",
-    "48": "images/yt_classic48.png",
-    "128": "images/yt_classic128.png"
-  },
-  "manifest_version": 2
+    "author": "GSM",
+    "background": {
+        "page": "background.html",
+        "persistent": true
+    },
+    "description": "Restore Classic YouTube!",
+    "icons": {
+        "16": "images/yt_classic16.png",
+        "32": "images/yt_classic32.png",
+        "48": "images/yt_classic48.png",
+        "128": "images/yt_classic128.png"
+    },
+    "manifest_version": 2,
+    "name": "YouTube Classic",
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "*://www.youtube.com/*"
+    ],
+    "version": "1.2",
+    "-ms-preload": {
+        "backgroundScript": "backgroundScriptsAPIBridge.js",
+        "contentScript": "contentScriptsAPIBridge.js"
+    }
 }
